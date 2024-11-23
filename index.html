@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détecteur de Texte IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <h1>Détecteur de Texte IA</h1>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="analyze">Analyse Simple</button>
+                <button class="tab-btn" data-tab="compare">Comparaison</button>
+                <button class="tab-btn" data-tab="history">Historique</button>
+            </div>
+            
+            <div class="tab-content active" id="analyze">
+                <div class="detector-box">
+                    <textarea id="textInput" placeholder="Collez votre texte ici pour l'analyser..." rows="8"></textarea>
+                    <div class="text-stats">
+                        <span id="wordCount">0 mots</span>
+                        <span id="charCount">0 caractères</span>
+                    </div>
+                    <button id="analyzeBtn">Analyser le texte</button>
+                    <div id="result" class="result-box" style="display: none;"></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="compare">
+                <div class="comparison-box">
+                    <div class="text-column">
+                        <h3>Texte 1</h3>
+                        <textarea id="text1" placeholder="Premier texte à comparer..." rows="8"></textarea>
+                    </div>
+                    <div class="text-column">
+                        <h3>Texte 2</h3>
+                        <textarea id="text2" placeholder="Second texte à comparer..." rows="8"></textarea>
+                    </div>
+                    <button id="compareBtn">Comparer les textes</button>
+                    <div id="compareResult" class="result-box" style="display: none;"></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="history">
+                <div class="history-box">
+                    <h3>Analyses récentes</h3>
+                    <div id="historyList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="detector.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
